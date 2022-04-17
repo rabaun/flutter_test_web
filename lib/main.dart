@@ -3,7 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'screen/home.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -16,17 +18,18 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter_ScreenUtil',
         theme: ThemeData(
-          primarySwatch: Colors.red,
+          primarySwatch: Colors.blue,
           textTheme: TextTheme(button: TextStyle(fontSize: 45.sp)),
         ),
         builder: (context, widget) {
+          ScreenUtil.setContext(context);
           return MediaQuery(
             //Setting font does not change with system font size
             data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
             child: widget!,
           );
         },
-        home: const HomePage(title: 'FlutterScreenUtil Demo'),
+        home:  HomePage(title: 'FlutterScreenUtil Demo'),
       ),
     );
   }

@@ -1,12 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_web/screen/scrolle.dart';
+import 'package:flutter_app_web/screen/scrolle_drawer.dart';
 import 'package:flutter_app_web/screen/view1.dart';
 import 'package:flutter_app_web/screen/view2.dart';
 import 'package:flutter_app_web/screen/view3.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key, required this.title}) : super(key: key);
@@ -72,26 +71,26 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     View2(),
     View3(),
   ];
+  var width;
 
   @override
   Widget build(BuildContext context) {
     printScreenInformation();
-    double width = ScreenUtil().screenWidth;
+    var size = MediaQuery.of(context).size.width;
+    setState(() {
+      width = size;
+    });
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
         actions: [
           Expanded(
               flex: 2,
-              child: Padding(
+              child: Container(
                 padding: const EdgeInsets.fromLTRB(50, 0, 0, 0),
-                child: SizedBox(
-                  width: width * 0.132,
-                  height: width * 0.072,
-                  child: const Image(
-                    image: AssetImage('logo.png'),
-                    // width: MediaQuery.of(context).size.width,
-                  ),
+                child: const Image(
+                  image: AssetImage('logo.png'),
+                  // width: MediaQuery.of(context).size.width,
                 ),
               )),
           Expanded(
@@ -100,7 +99,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
               width: width * 0.132,
               height: width * 0.072,
-              color: Colors.red,
               alignment: Alignment.centerLeft,
               child: Text('ООО "Центр Безопасности Труда"',
                   textDirection: TextDirection.ltr,
@@ -115,11 +113,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
           ),
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Container(
               width: width * 0.132,
               height: width * 0.072,
-              color: Colors.red,
               alignment: Alignment.center,
               child: TextButton(
                   style: TextButton.styleFrom(
@@ -141,11 +138,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
           ),
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Container(
               width: width * 0.132,
               height: width * 0.072,
-              color: Colors.red,
               alignment: Alignment.center,
               child: TextButton(
                   style: TextButton.styleFrom(
@@ -167,11 +163,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
           ),
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Container(
               width: width * 0.132,
               height: width * 0.072,
-              color: Colors.red,
               alignment: Alignment.center,
               child: TextButton(
                   style: TextButton.styleFrom(
@@ -193,11 +188,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
           ),
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Container(
               width: width * 0.132,
               height: width * 0.072,
-              color: Colors.red,
               alignment: Alignment.center,
               child: TextButton(
                   style: TextButton.styleFrom(
@@ -219,11 +213,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
           ),
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Container(
               width: width * 0.132,
               height: width * 0.072,
-              color: Colors.red,
               alignment: Alignment.center,
               child: TextButton(
                   style: TextButton.styleFrom(
@@ -245,11 +238,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
           ),
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Container(
               width: width * 0.132,
               height: width * 0.072,
-              color: Colors.red,
               alignment: Alignment.center,
               child: TextButton(
                   style: TextButton.styleFrom(
@@ -274,7 +266,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       ),
       drawer: const Drawer(
         elevation: 16.0,
-        child: ScrolleView(),
+        child: DrawerScrolleView(),
       ),
       body: ListView.builder(
         controller: _scrollController,

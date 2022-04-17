@@ -1,31 +1,39 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_web/screen/zoom_image.dart';
-import 'package:flutter_app_web/screen/zoom_image1.dart';
-import 'package:flutter_app_web/screen/zoom_image2.dart';
-import 'package:flutter_app_web/screen/zoom_image3.dart';
+import 'package:flutter_app_web/image/zoom_image.dart';
+import 'package:flutter_app_web/image/zoom_image1.dart';
+import 'package:flutter_app_web/image/zoom_image2.dart';
+import 'package:flutter_app_web/image/zoom_image3.dart';
 
 class View3 extends StatelessWidget {
   View3({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: <Widget>[
-        Column(
-          children: [
-            Row(
-              children: const [
-                ZoomImage(),
-                ZoomImage1(),
-                ZoomImage2(),
-              ],
-            ),
-            Row(children: const [
-              ZoomImage3(),
-            ]),
+    return Column(
+      children: [
+        Row(
+          children: <Widget>[
+            Expanded(
+                flex: 2,
+                child: Container(
+                  child: ZoomImage(),
+                )),
+            Expanded(
+                flex: 2,
+                child: Container(
+                  child: ZoomImage1(),
+                )),
+            Expanded(
+                flex: 2,
+                child: Container(
+                  child: ZoomImage2(),
+                )),
           ],
+        ),
+        Container(
+          alignment: Alignment.center,
+          child: ZoomImage3(),
         ),
       ],
     );

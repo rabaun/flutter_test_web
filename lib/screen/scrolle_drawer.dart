@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ScrolleView extends StatelessWidget {
-  const ScrolleView({Key? key}) : super(key: key);
+class DrawerScrolleView extends StatelessWidget {
+  const DrawerScrolleView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class ScrolleView extends StatelessWidget {
         UserAccountsDrawerHeader(
           accountName: Text('ООО "Центр Безопасности Труда"',
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.black,
                 fontFamily: 'PlayfairDisplay',
                 fontStyle: FontStyle.normal,
                 fontSize: width * 0.01,
@@ -24,7 +24,7 @@ class ScrolleView extends StatelessWidget {
               Text('email: cbt-tambov@yandex.ru',
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontFamily: 'PlayfairDisplay',
                     fontStyle: FontStyle.normal,
                     fontSize: width * 0.01,
@@ -32,7 +32,7 @@ class ScrolleView extends StatelessWidget {
               Text('тел.: +7 (4752) 73-44-06',
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontFamily: 'PlayfairDisplay',
                     fontStyle: FontStyle.normal,
                     fontSize: width * 0.01,
@@ -40,7 +40,7 @@ class ScrolleView extends StatelessWidget {
             ]),
           ),
           currentAccountPicture: const CircleAvatar(
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.blue,
             child: Image(
               image: AssetImage('logo.png'),
               // width: MediaQuery.of(context).size.width,
@@ -49,7 +49,7 @@ class ScrolleView extends StatelessWidget {
           otherAccountsPictures: const <Widget>[
             CircleAvatar(
               backgroundColor: Colors.white,
-              child: Text("Fujjy"),
+              child: Text("  "),
             )
           ],
         ),
@@ -58,7 +58,6 @@ class ScrolleView extends StatelessWidget {
           child: Container(
             width: width * 0.6,
             height: width * 0.183,
-            color: Colors.red,
             alignment: Alignment.center,
             child: TextButton(
                 style: TextButton.styleFrom(
@@ -71,7 +70,7 @@ class ScrolleView extends StatelessWidget {
                   'Главная',
                   textAlign: TextAlign.end,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontFamily: 'PlayfairDisplay',
                     fontStyle: FontStyle.normal,
                     fontSize: width * 0.01,
@@ -84,7 +83,6 @@ class ScrolleView extends StatelessWidget {
           child: Container(
             width: width * 0.6,
             height: width * 0.183,
-            color: Colors.red,
             alignment: Alignment.center,
             child: TextButton(
                 style: TextButton.styleFrom(
@@ -97,7 +95,7 @@ class ScrolleView extends StatelessWidget {
                   'О компании',
                   textAlign: TextAlign.end,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontFamily: 'PlayfairDisplay',
                     fontStyle: FontStyle.normal,
                     fontSize: width * 0.01,
@@ -110,7 +108,6 @@ class ScrolleView extends StatelessWidget {
           child: Container(
             width: width * 0.6,
             height: width * 0.183,
-            color: Colors.red,
             alignment: Alignment.center,
             child: TextButton(
                 style: TextButton.styleFrom(
@@ -123,7 +120,7 @@ class ScrolleView extends StatelessWidget {
                   'СОУТ',
                   textAlign: TextAlign.end,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontFamily: 'PlayfairDisplay',
                     fontStyle: FontStyle.normal,
                     fontSize: width * 0.01,
@@ -136,7 +133,6 @@ class ScrolleView extends StatelessWidget {
           child: Container(
             width: width * 0.6,
             height: width * 0.183,
-            color: Colors.red,
             alignment: Alignment.center,
             child: TextButton(
                 style: TextButton.styleFrom(
@@ -149,7 +145,7 @@ class ScrolleView extends StatelessWidget {
                   'ПК',
                   textAlign: TextAlign.end,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontFamily: 'PlayfairDisplay',
                     fontStyle: FontStyle.normal,
                     fontSize: width * 0.01,
@@ -162,7 +158,6 @@ class ScrolleView extends StatelessWidget {
           child: Container(
             width: width * 0.6,
             height: width * 0.183,
-            color: Colors.red,
             alignment: Alignment.center,
             child: TextButton(
                 style: TextButton.styleFrom(
@@ -175,7 +170,7 @@ class ScrolleView extends StatelessWidget {
                   'Документы',
                   textAlign: TextAlign.end,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontFamily: 'PlayfairDisplay',
                     fontStyle: FontStyle.normal,
                     fontSize: width * 0.01,
@@ -188,7 +183,6 @@ class ScrolleView extends StatelessWidget {
           child: Container(
             width: width * 0.6,
             height: width * 0.183,
-            color: Colors.red,
             alignment: Alignment.center,
             child: TextButton(
                 style: TextButton.styleFrom(
@@ -201,7 +195,7 @@ class ScrolleView extends StatelessWidget {
                   'Контакты',
                   textAlign: TextAlign.end,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontFamily: 'PlayfairDisplay',
                     fontStyle: FontStyle.normal,
                     fontSize: width * 0.01,
