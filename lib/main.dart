@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: () => MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter_ScreenUtil',
+        title: 'ООО "Центр Безопасности Труда"',
         theme: ThemeData(
           primarySwatch: Colors.blue,
           textTheme: TextTheme(button: TextStyle(fontSize: 45.sp)),
