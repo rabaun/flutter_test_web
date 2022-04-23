@@ -20,7 +20,7 @@
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
     <meta name="description" content="A new Flutter project.">
     <meta name="yandex-verification" content="ac7b6d7ec39394d8"/>
-    <meta name="google-site-verification" content="yYBMBB07wJ18jpwscVeccjAypJSRRtcr0HoPGNmmYcY" />
+    <meta name="google-site-verification" content="yYBMBB07wJ18jpwscVeccjAypJSRRtcr0HoPGNmmYcY"/>
     <!-- iOS meta tags & icons -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -34,6 +34,25 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(88523407, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+
+</script>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/88523407" style="position:absolute; left:-9999px;"
+              alt=""/></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
 <!-- This script installs service_worker.js to provide PWA functionality to
      application. For more information, see:
      https://developers.google.com/web/fundamentals/primers/service-workers -->
@@ -51,6 +70,7 @@
       };
 
  firebase.initializeApp(firebaseConfig);
+
 
 
 
@@ -119,6 +139,7 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
+
 
 
 
