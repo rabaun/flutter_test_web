@@ -71,6 +71,10 @@ flutter:
     - 'doc4.jpg'
     - 'ros_att.jpg'
     - 'sv_nal.jpg'
+    - 'address.png'
+    - 'prod_control.jpg'
+    - 'prof_risk.jpg'
+    - 'sout.jpg'
 
 
   # To add assets to your application, add an assets section, like this:

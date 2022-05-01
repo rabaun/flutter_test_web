@@ -10,45 +10,46 @@ class PrefetchImageDemo extends StatefulWidget {
 }
 
 class _PrefetchImageDemoState extends State<PrefetchImageDemo> {
-  final List<String> images = [
-    'https://images.unsplash.com/photo-1586882829491-b81178aa622e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
-    'https://images.unsplash.com/photo-1586871608370-4adee64d1794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2862&q=80',
-    'https://images.unsplash.com/photo-1586901533048-0e856dff2c0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-    'https://images.unsplash.com/photo-1586902279476-3244d8d18285?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
-    'https://images.unsplash.com/photo-1586943101559-4cdcf86a6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1556&q=80',
-    'https://images.unsplash.com/photo-1586951144438-26d4e072b891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-    'https://images.unsplash.com/photo-1586953983027-d7508a64f4bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
+  var width;
+  final List<AssetImage> images = [
+    AssetImage('prod_control.jpg'),
+    AssetImage('prof_risk.jpg'),
+    AssetImage('sout.jpg'),
   ];
 
   @override
   void initState() {
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
-      images.forEach((imageUrl) {
-        precacheImage(NetworkImage(imageUrl), context);
-      });
+    images.forEach((image) async {
+      await precacheImage(AssetImage(''), context);
     });
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size.width;
+    setState(() {
+      width = size;
+    });
     return Scaffold(
       body: Container(
-        width: ScreenUtil().setWidth(180),
-        height: ScreenUtil().setHeight(250),
+        width: width * 0.6,
+        height: width * 0.162,
         child: CarouselSlider.builder(
-          itemCount: images.length,
-          options: CarouselOptions(
-            autoPlay: true,
-            aspectRatio: 3.0,
-            enlargeCenterPage: true,
-          ),
-          itemBuilder: (context, index, realIdx) {
-            return Center(
-                child: Image.network(images[index],
-                    fit: BoxFit.cover, width: 500,));
-          },
-        ),
+            itemCount: images.length,
+            options: CarouselOptions(
+              autoPlay: true,
+              aspectRatio: 3.0,
+              enlargeCenterPage: true,
+            ),
+            itemBuilder: (context, index, realIdx) {
+              return Center(
+                  child: Image(
+                fit: BoxFit.cover,
+                width: width * 0.3,
+                image: images[index],
+              ));
+            }),
       ),
     );
   }

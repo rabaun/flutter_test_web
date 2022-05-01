@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_web/screen/view6.dart';
 import 'package:flutter_app_web/screen/scrolle_drawer.dart';
 import 'package:flutter_app_web/screen/view1.dart';
 import 'package:flutter_app_web/screen/view2.dart';
 import 'package:flutter_app_web/screen/view3.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_app_web/screen/view4.dart';
+import 'package:flutter_app_web/screen/view5.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key, required this.title}) : super(key: key);
@@ -70,12 +72,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     View1(),
     View2(),
     View3(),
+    View4(),
+    View5(),
+    View6(),
   ];
   var width;
 
   @override
   Widget build(BuildContext context) {
-    printScreenInformation();
     var size = MediaQuery.of(context).size.width;
     setState(() {
       width = size;
@@ -287,18 +291,4 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
     );
   }
-}
-
-void printScreenInformation() {
-  print('Device width dp:${1.sw}dp');
-  print('Device height dp:${1.sh}dp');
-  print('Device pixel density:${ScreenUtil().pixelRatio}');
-  print('Bottom safe zone distance dp:${ScreenUtil().bottomBarHeight}dp');
-  print('Status bar height dp:${ScreenUtil().statusBarHeight}dp');
-  print('The ratio of actual width to UI design:${ScreenUtil().scaleWidth}');
-  print('The ratio of actual height to UI design:${ScreenUtil().scaleHeight}');
-  print('System font scaling:${ScreenUtil().textScaleFactor}');
-  print('0.5 times the screen width:${0.5.sw}dp');
-  print('0.5 times the screen height:${0.5.sh}dp');
-  print('Screen orientation:${ScreenUtil().orientation}');
 }
