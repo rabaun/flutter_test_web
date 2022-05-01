@@ -2,6 +2,14 @@
 class Assets {
   Assets._();
 
+  static const String assetsAddress = 'assets/address.png';
+  static const String assetsDoc4 = 'assets/doc4.jpg';
   static const String assetsLogo = 'assets/logo.png';
+  static const String assetsProdControl = 'assets/prod_control.jpg';
+  static const String assetsProfRisk = 'assets/prof_risk.jpg';
+  static const String assetsRosAtt = 'assets/ros_att.jpg';
+  static const String assetsSout = 'assets/sout.jpg';
+  static const String assetsSvGosUr = 'assets/sv_gos_ur.jpg';
+  static const String assetsSvNal = 'assets/sv_nal.jpg';
 
 }
