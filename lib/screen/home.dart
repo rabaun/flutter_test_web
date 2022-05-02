@@ -178,7 +178,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     primary: Colors.white,
                     textStyle: const TextStyle(fontSize: 16),
                   ),
-                  onPressed: () {},
+                  onPressed: () => _scrollPosition(width * 0.45),
                   child: Text(
                     'СОУТ',
                     textAlign: TextAlign.end,
@@ -228,7 +228,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     primary: Colors.white,
                     textStyle: const TextStyle(fontSize: 16),
                   ),
-                  onPressed: () => _scrollPosition(width * 0.4),
+                  onPressed: () => _scrollPosition(width * 0.65),
                   child: Text(
                     'Документы',
                     textAlign: TextAlign.end,
@@ -253,7 +253,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     primary: Colors.white,
                     textStyle: const TextStyle(fontSize: 16),
                   ),
-                  onPressed: () {},
+                  onPressed: () => _scrollPosition(width * 0.85),
                   child: Text(
                     'Контакты',
                     textAlign: TextAlign.end,

@@ -29,11 +29,12 @@ class View4 extends StatelessWidget {
                 child: Container(
                   child: ZoomImage2(),
                 )),
+            Expanded(
+                flex: 2,
+                child: Container(
+                  child: ZoomImage3(),
+                )),
           ],
-        ),
-        Container(
-          alignment: Alignment.center,
-          child: ZoomImage3(),
         ),
       ],
     );
